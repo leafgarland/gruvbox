@@ -483,8 +483,12 @@ call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg4, s:bg0, s:bold . s:inverse)
-call s:HL('StatusLineNC', s:bg2, s:fg4, s:bold . s:inverse)
+call s:HL('StatusLine',   s:yellow, s:bg3, s:bold)
+call s:HL('StatusLineNC', s:fg4, s:bg2)
+call s:HL('User1', s:yellow, s:bg3)
+call s:HL('User2', s:blue, s:bg1)
+call s:HL('User3', s:bg0, s:bg3)
+call s:HL('User4', s:bg0, s:bg2)
 
 " The column separating vertically split windows
 call s:HL('VertSplit', s:fg4, s:vert_split)
@@ -585,7 +589,7 @@ hi! link Constant GruvboxPurple
 hi! link Character GruvboxPurple
 " String constant: "this is a string"
 if g:gruvbox_improved_strings == 0
-  call s:HL('String',  s:green, s:none, s:italicize_strings)
+  call s:HL('String',  s:green, s:bg1, s:italicize_strings)
 else
   call s:HL('String',  s:bg1, s:fg1, s:italicize_strings)
 endif
