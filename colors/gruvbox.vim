@@ -451,9 +451,9 @@ if version >= 700
   hi! link CursorColumn CursorLine
 
   " Tab pages line filler
-  call s:HL('TabLineFill', s:bg4, s:vim_bg, s:invert_tabline)
+  call s:HL('TabLineFill', s:gb.bright_blue, s:gb.faded_blue)
   " Active tab page label
-  call s:HL('TabLineSel', s:vim_bg, s:bg4, s:bold . s:invert_tabline)
+  call s:HL('TabLineSel', s:aqua, s:gb.faded_blue, s:bold)
   " Not active tab page label
   hi! link TabLine TabLineFill
 
@@ -483,15 +483,13 @@ call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:yellow, s:bg3, s:bold)
+call s:HL('StatusLine',   s:fg1, s:bg2)
 call s:HL('StatusLineNC', s:fg4, s:bg2)
-call s:HL('User1', s:yellow, s:bg3)
-call s:HL('User2', s:blue, s:bg1)
-call s:HL('User3', s:bg0, s:bg3)
-call s:HL('User4', s:bg0, s:bg2)
+call s:HL('User1', s:orange, s:bg2, s:bold)
+call s:HL('User2', s:blue, s:bg2, s:bold)
 
 " The column separating vertically split windows
-call s:HL('VertSplit', s:fg4, s:vert_split)
+call s:HL('VertSplit', s:vert_split, s:bg0)
 
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
@@ -503,11 +501,11 @@ hi! link Directory GruvboxGreenBold
 hi! link Title GruvboxGreenBold
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
+call s:HL('ErrorMsg', s:gb.bright_red, s:gb.faded_red, s:bold)
 " More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 " Current mode message: -- INSERT --
-hi! link ModeMsg GruvboxYellowBold
+hi! link ModeMsg GruvboxGreenBold
 " 'Press enter' prompt and yes/no questions
 hi! link Question GruvboxOrangeBold
 " Warning messages
